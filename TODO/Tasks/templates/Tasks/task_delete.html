@@ -1,0 +1,13 @@
+{% extends 'Tasks/main.html' %} {% block content %}
+
+<a href="{% url 'Tasks' %}">Back</a>
+<form method="POST" action="">
+  {% csrf_token %}
+  <p>
+    '{{deletetask}}' Will be permanently deleted Are you sure you want to do
+    that?
+  </p>
+  <input type="submit" value="Delete" />
+</form>
+
+{% endblock content %}
